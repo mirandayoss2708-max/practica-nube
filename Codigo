@@ -46,17 +46,18 @@
 <body>
   <div class="card">
     <div class="nube">☁️</div>
-    <h1>Práctica: Cómputo en la Nube</h1>
+    <h1>Actividad 10. Práctica Cloud computing</h1>
     <h2>Hospedada en Microsoft Azure</h2>
     <div class="divider"></div>
     <div class="info">
-      <p><strong>Equipo:</strong> Nombre del equipo</p>
+      <p><strong>Equipo:</strong></p>
       <p><strong>Integrantes:</strong></p>
-      <p>Nombre 1</p>
-      <p>Nombre 2</p>
-      <p>Nombre 3</p>
-      <p><strong>Materia:</strong> Nombre de la materia</p>
-      <p><strong>Institución:</strong> Nombre de tu escuela</p>
+      <p>Yocelin Miranda</p>
+      <p>Mariana Alcantara</p>
+      <p>Santiago Alderete</p>
+      <p>Emmanuel Alcantare</p>
+      <p><strong>Materia:</strong> Industria 4.0</p>
+      <p><strong>Institución:</strong> Anahuac</p>
     </div>
     <div class="badge">✅ Desplegada exitosamente en Azure</div>
   </div>
