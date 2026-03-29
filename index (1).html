@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 10 – Práctica Cloud Computing</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(160deg, #0a1628 0%, #0d2a4e 50%, #0a1628 100%);
+      min-height: 100vh;
+      color: #e0eaff;
+      padding: 40px 20px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .badge-top {
+      display: inline-block;
+      background: rgba(0,120,212,0.25);
+      border: 1px solid #0078d4;
+      color: #60b4ff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .header h1 { font-size: 30px; font-weight: 700; color: #ffffff; line-height: 1.3; margin-bottom: 8px; }
+    .header h2 { font-size: 16px; color: #7aaee8; font-weight: 400; }
+    .divider { height: 1px; background: linear-gradient(to right, transparent, #0078d4, transparent); margin: 30px 0; }
+    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 28px 32px; margin-bottom: 24px; }
+    .card-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; color: #60b4ff; margin-bottom: 16px; }
+    .card p { font-size: 15px; color: #c0d4ef; line-height: 1.8; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .steps { list-style: none; }
+    .steps li { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
+    .step-num { min-width: 32px; height: 32px; background: #0078d4; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: white; flex-shrink: 0; margin-top: 2px; }
+    .step-text strong { display: block; color: #e0eaff; font-size: 15px; margin-bottom: 4px; }
+    .step-text span { color: #a0bbd8; font-size: 14px; line-height: 1.6; }
+    .alert { background: rgba(220,60,40,0.12); border: 1px solid rgba(220,60,40,0.4); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; display: flex; gap: 14px; align-items: flex-start; }
+    .alert .alert-icon { font-size: 26px; flex-shrink: 0; }
+    .alert-body strong { display: block; color: #ff7f72; font-size: 16px; margin-bottom: 6px; }
+    .alert-body p { color: #d4a9a5; font-size: 14px; line-height: 1.7; }
+    .solution { background: rgba(0,180,100,0.1); border: 1px solid rgba(0,180,100,0.3); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; display: flex; gap: 14px; align-items: flex-start; }
+    .solution .sol-icon { font-size: 26px; flex-shrink: 0; }
+    .solution-body strong { display: block; color: #5de8a0; font-size: 16px; margin-bottom: 6px; }
+    .solution-body p { color: #a5d4bc; font-size: 14px; line-height: 1.7; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 8px; }
+    .member { background: rgba(0,120,212,0.15); border: 1px solid rgba(0,120,212,0.3); border-radius: 10px; padding: 14px 16px; text-align: center; }
+    .member .avatar { font-size: 28px; margin-bottom: 8px; }
+    .member .name { font-size: 13px; color: #c0d4ef; font-weight: 500; line-height: 1.4; }
+    .footer { text-align: center; margin-top: 40px; color: #4a7aaa; font-size: 13px; }
+    .badge-success { display: inline-block; background: rgba(0,180,100,0.2); border: 1px solid rgba(0,180,100,0.4); color: #5de8a0; padding: 8px 22px; border-radius: 20px; font-size: 14px; margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="badge-top">☁️ CLOUD COMPUTING</div>
+      <h1>Actividad 10. Práctica Cloud Computing</h1>
+      <h2>Universidad Anáhuac &nbsp;|&nbsp; Implementación en la nube</h2>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card">
+      <div class="card-title"><span>👥</span> Integrantes del equipo</div>
+      <div class="team-grid">
+        <div class="member"><div class="avatar">👩‍💻</div><div class="name">Yocelin Miranda Ochoa</div></div>
+        <div class="member"><div class="avatar">👨‍💻</div><div class="name">Emmanuel Alcantar Alvarez</div></div>
+        <div class="member"><div class="avatar">👨‍💻</div><div class="name">Santiago Alderete Copado</div></div>
+        <div class="member"><div class="avatar">👩‍💻</div><div class="name">Mariana Alcantara Madrigal</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span>📖</span> ¿Qué es el cómputo en la nube?</div>
+      <p>El cómputo en la nube (cloud computing) es un modelo tecnológico que permite acceder a recursos de cómputo — servidores, almacenamiento, bases de datos, redes y software — a través de internet, sin necesidad de contar con infraestructura física propia.</p>
+      <p>Entre sus principales proveedores se encuentran Microsoft Azure, Amazon Web Services (AWS) y Google Cloud Platform, los cuales ofrecen servicios escalables bajo demanda, reduciendo costos y facilitando el despliegue de aplicaciones a nivel global.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span>🔄</span> Proceso de la práctica</div>
+      <ul class="steps">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>Elección de la implementación</strong>
+            <span>El equipo decidió desarrollar una página web hospedada en la nube, ya que permite demostrar el despliegue de contenido web de forma accesible desde cualquier dispositivo con internet.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Selección de plataforma: Microsoft Azure</strong>
+            <span>Se eligió Microsoft Azure como plataforma principal utilizando el servicio Azure Static Web Apps por su facilidad de despliegue e interfaz en español.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Intento de creación en Azure</strong>
+            <span>Se accedió al portal de Azure y se intentó crear un grupo de recursos llamado "practica_group" para alojar la aplicación web estática.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <strong>Bloqueo por política institucional</strong>
+            <span>Azure mostró el error: "La directiva no permitió el recurso practica_group" con la política "BloqueaTodaCreacionDeRecursos", impuesta por la Universidad Anáhuac, lo que impidió continuar en esta plataforma.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div class="step-text">
+            <strong>Solución alternativa: GitHub Pages</strong>
+            <span>Ante la restricción, el equipo optó por GitHub Pages como plataforma de hospedaje en la nube, igualmente válida para los objetivos de la práctica.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">6</div>
+          <div class="step-text">
+            <strong>Despliegue exitoso</strong>
+            <span>Se creó el repositorio en GitHub, se subió el archivo index.html y se activó GitHub Pages, logrando publicar la página web en la nube de manera exitosa.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="alert">
+      <div class="alert-icon">⚠️</div>
+      <div class="alert-body">
+        <strong>¿Por qué no se pudo usar Microsoft Azure?</strong>
+        <p>La cuenta de Azure de la Universidad Anáhuac tiene configurada una política de seguridad institucional llamada <strong>"BloqueaTodaCreacionDeRecursos"</strong>, la cual impide la creación de nuevos grupos de recursos. Esta restricción es establecida por la administración universitaria para controlar el uso de recursos en la nube y evitar cargos no autorizados en la suscripción institucional.</p>
+      </div>
+    </div>
+
+    <div class="solution">
+      <div class="sol-icon">✅</div>
+      <div class="solution-body">
+        <strong>Solución implementada: GitHub Pages</strong>
+        <p>GitHub Pages es un servicio de hospedaje web gratuito que publica sitios directamente desde un repositorio de GitHub. Al igual que Azure, AWS o Google Cloud, entrega contenido desde servidores distribuidos globalmente, siendo una alternativa válida de cloud computing para esta práctica.</p>
+        <p style="margin-top:8px;">🔗 Esta misma página es el resultado del despliegue exitoso en la nube.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span>📊</span> Resultados y conclusiones</div>
+      <p>Se logró desplegar exitosamente una página web en la nube utilizando GitHub Pages. La página es accesible desde cualquier dispositivo con conexión a internet, cumpliendo con el objetivo principal de la práctica: implementar un servicio en la nube.</p>
+      <p>La experiencia también permitió al equipo identificar y resolver un obstáculo real en entornos cloud: las políticas de seguridad institucionales, situaciones muy comunes en ambientes corporativos y educativos, y que forman parte del aprendizaje práctico en el área de cómputo en la nube.</p>
+    </div>
+
+    <div class="footer">
+      <div class="badge-success">☁️ Página desplegada exitosamente en la nube</div>
+      <p>Actividad 10 · Práctica Cloud Computing · Universidad Anáhuac</p>
+    </div>
+
+  </div>
+</body>
+</html>
